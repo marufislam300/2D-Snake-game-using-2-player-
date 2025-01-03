@@ -4,6 +4,7 @@ from OpenGL.GLU import *
 import random
 import sys
 import math
+import os  # Added import for os module
 
 # -------------------------------------------------------------------------
 # WINDOW & GLOBAL VARIABLES
@@ -374,7 +375,7 @@ def mouse(button, state, x, y):
             print("Close Button Clicked")
             # Destroy the window and exit
             glutDestroyWindow(window_id)
-            sys.exit()
+            os._exit(0)  # Replaced sys.exit() with os._exit(0) for immediate termination
 
     # Removed mode selection via mouse clicks
 
